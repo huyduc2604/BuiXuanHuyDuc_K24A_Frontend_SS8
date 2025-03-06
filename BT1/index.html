@@ -1,130 +1,80 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Cards</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Reset mặc định */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+        *{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f8f8;
-}
-
-.container {
-    display: flex;
-    gap: 20px;
-    max-width: 900px;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
+.table1 {
+    border-collapse: collapse;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 400px;
+    border-color: #ece1e1;
 }
-
-h4 {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
+.table2 {
+    border-collapse: collapse;
+    text-align: center;
+    border-color: #ece1e1;
+    border-right-color: black;
 }
-
-h2 {
-    font-size: 20px;
+.all{
+    text-align: center;
+    padding: 300px;
+}
+.title1{
+    padding:0 200px 0 200px;
+    width: 300px;
+}
+.title2{
+    padding:0 200px 0 200px;
+    width: 330px;
+}
+.text{
+    color: #a5a8aa;
+    font-size: 25px;
+    margin-left:120px;
+    width: 490px;
+}
+button{
+    margin-bottom: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    border: 1 solid black;
     font-weight: bold;
-    margin-bottom: 15px;
 }
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-button {
-    padding: 10px 15px;
-    border: 1px solid black;
-    background: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-}
-
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <div class="card">
-            <h4>April 24, 2017</h4>
-            <h2>SED MAGNA IPSUM FAUCIBUS</h2>
-            <img src="https://images.pexels.com/photos/30889575/pexels-photo-30889575/free-photo-of-chi-c-xe-th-thao-mau-cam-thanh-l-ch-tren-con-d-ng-danh-lam-th-ng-c-nh.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Orange Car">
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-            <button>FULL STORY</button>
-        </div>
-
-        <div class="card">
-            <h4>April 22, 2017</h4>
-            <h2>PRIMIS EGET IMPERDIET LOREM</h2>
-            <img src="https://hoangvietauto.vn/wp-content/uploads/E1BAA2nh-siC3AAu-xe-Lamborghini.jpg" alt="Business Man">
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-            <button>FULL STORY</button>
-        </div>
+    <div class="all" style="display: flex;">
+        <table border="1" class="table1">
+            <tr>
+                <td>
+                    <div class="content1">
+                        <p >April 24, 2017</p>
+                        <h1 class="title1">SED MAGNA IPSUM FAUCIBUS</h1>
+                        <img src="https://imgs.search.brave.com/VCGLoD1_nY1TKLVtCPgKXh2_5mLm6EhMZXzG-6py2FI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by92/aW50YWdlLXNlZGFu/LWNhci1kcml2aW5n/LWhpZ2h3YXktc2lk/ZS12aWV3XzExNDU3/OS01MDY3LmpwZz9z/ZW10PWFpc19oeWJy/aWQ" alt="">
+                        <p class="text" style="text-align: left;">Donec eget ex magna. iterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <button>FULL STORY</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table border="1" class="table2">
+            <tr>
+                <td>
+                    <div class="content2">
+                        <p>April 22, 2017</p>
+                        <h1 class="title2">PRIMS EGET IMPERDIET LOREM</h1>
+                        <img src="https://imgs.search.brave.com/8pnC1e23P-53AEVNZgRfrLn7YXaaPqoKgFuia9iDdyA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbWVu/LWJhY2tncm91bmQt/MTNhZHRpMGIzcW8z/bzFnbS5qcGc" alt="">
+                        <p class="text" style="text-align: left;">Donec eget ex magna. iterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <button>FULL STORY</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
-
 </body>
 </html>
-
-<!-- Các bước thực hiện:
-1. Cấu trúc HTML
-Sử dụng <div> để tạo bố cục chứa hai thẻ bài viết.
-Dùng <h4> cho ngày tháng, <h2> cho tiêu đề.
-Thêm <img> để hiển thị hình ảnh.
-Dùng <p> cho phần mô tả nội dung.
-Thêm <button> cho nút "FULL STORY".
-2. CSS để tạo kiểu
-Dùng display: flex; để căn hai bài viết theo hàng ngang.
-Canh giữa nội dung văn bản.
-Định dạng kiểu chữ (font-family, font-size, font-weight).
-Tạo khoảng cách, padding, margin hợp lý.
-Tạo hiệu ứng nút bấm khi hover.
-
-Giải thích mã nguồn
-HTML
-
-Dùng <div class="container"> để chứa hai thẻ bài viết.
-Mỗi bài viết là một <div class="card">, chứa thông tin ngày, tiêu đề, ảnh, nội dung và nút.
-CSS
-
-Sử dụng display: flex; trong .container để xếp hai thẻ bài viết cạnh nhau.
-box-shadow và border-radius giúp làm mềm góc và tạo hiệu ứng đổ bóng.
-Ảnh width: 100% để căn chỉnh linh hoạt theo kích thước thẻ.
-Nút hover có hiệu ứng đổi màu khi rê chuột vào. -->
