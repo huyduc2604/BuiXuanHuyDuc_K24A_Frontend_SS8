@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* Căn giữa form trong màn hình, thiết lập nền và font chữ */
+        body {
+            display: flex; /* Sử dụng flexbox để căn giữa */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+            align-items: center; /* Canh giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao toàn màn hình */
+            background: #2f1a41; /* Màu nền tím đậm */
+            font-family: Arial, sans-serif; /* Font chữ */
+        }
+
+        /* Định dạng vùng chứa form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05); /* Nền trong suốt nhẹ */
+            padding: 20px; /* Khoảng cách bên trong form */
+            border-radius: 10px; /* Bo tròn góc */
+            width: 400px; /* Độ rộng form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+            color: white; /* Màu chữ */
+        }
+
+        /* Định dạng label để làm tiêu đề cho input */
+        .contact-form label {
+            font-weight: bold; /* Chữ in đậm */
+            display: block; /* Hiển thị dạng khối để xuống dòng */
+            margin-top: 10px; /* Khoảng cách giữa các label */
+        }
+
+        /* Định dạng input và textarea để nhập dữ liệu */
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%; /* Chiều rộng tối đa */
+            padding: 10px; /* Khoảng cách bên trong */
+            margin-top: 5px; /* Khoảng cách giữa các ô nhập */
+            border: 1px solid #ccc; /* Viền nhẹ màu xám */
+            border-radius: 5px; /* Bo tròn viền */
+            background: transparent; /* Nền trong suốt */
+            color: white; /* Màu chữ trắng */
+        }
+
+        /* Định dạng riêng cho textarea */
+        .contact-form textarea {
+            height: 100px; /* Độ cao của ô nhập */
+            resize: none; /* Không cho phép thay đổi kích thước */
+        }
+
+        /* Định dạng nút gửi */
+        .contact-form button {
+            background: white; /* Nền trắng */
+            color: black; /* Màu chữ đen */
+            padding: 10px 15px; /* Kích thước nút */
+            border: none; /* Xóa viền */
+            cursor: pointer; /* Biểu tượng con trỏ khi hover */
+            font-weight: bold; /* Chữ in đậm */
+            margin-top: 15px; /* Khoảng cách giữa nút và input */
+            width: 100%; /* Chiều rộng tối đa */
+            border-radius: 5px; /* Bo tròn góc */
+        }
+
+        /* Hiệu ứng hover khi di chuột vào nút gửi */
+        .contact-form button:hover {
+            background: #ddd; /* Đổi màu nền khi hover */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Form nhập thông tin liên hệ -->
+    <form class="contact-form">
+        <!-- Ô nhập tên -->
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <!-- Ô nhập email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <!-- Ô nhập tin nhắn -->
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Enter your message"></textarea>
+
+        <!-- Nút gửi form -->
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+
+    <script>
+        // Lắng nghe sự kiện khi người dùng nhấn nút gửi form
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động gửi form mặc định
+
+            // Lấy giá trị từ các ô nhập liệu và loại bỏ khoảng trắng dư thừa
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let message = document.getElementById('message').value.trim();
+
+            // Kiểm tra nếu các trường trống, hiển thị cảnh báo
+            if (name === "" || email === "" || message === "") {
+                alert("Vui lòng điền đầy đủ thông tin!");
+            } else {
+                // Nếu hợp lệ, hiển thị thông báo gửi thành công
+                alert("Gửi thành công!");
+            }
+        });
+    </script>
+</body>
+</html>

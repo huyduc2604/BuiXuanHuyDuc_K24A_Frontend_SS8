@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"> <!-- Định dạng ký tự là UTF-8 (hỗ trợ tiếng Việt) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Giúp trang web hiển thị tốt trên thiết bị di động -->
+    <title>Dịch Vụ</title> <!-- Tiêu đề hiển thị trên tab trình duyệt -->
+
+    <!-- Liên kết đến Font Awesome để sử dụng icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+
+    <style>
+        /* --- RESET CSS --- */
+        * {
+            margin: 0; /* Loại bỏ khoảng trắng mặc định */
+            padding: 0; /* Loại bỏ khoảng trắng mặc định */
+            box-sizing: border-box; /* Giữ nguyên kích thước phần tử khi thêm padding hoặc border */
+            font-family: 'Arial', sans-serif; /* Định dạng font chữ mặc định */
+        }
+
+        /* --- CONTAINER CHÍNH --- */
+        .container {
+            width: 80%; /* Định dạng chiều rộng tối đa của nội dung */
+            margin: auto; /* Căn giữa trang */
+            padding: 50px 0; /* Tạo khoảng cách trên dưới */
+        }
+
+        /* --- TIÊU ĐỀ CHÍNH --- */
+        .section-title {
+            font-size: 32px; /* Kích thước chữ lớn */
+            font-weight: bold; /* In đậm */
+            color: #222; /* Màu chữ xám đậm */
+            text-align: left; /* Căn lề trái */
+            margin-bottom: 20px; /* Khoảng cách phía dưới tiêu đề */
+            border-bottom: 2px solid #d9534f; /* Tạo đường gạch chân màu đỏ */
+            display: inline-block; /* Để border gạch chân chỉ bằng nội dung */
+            padding-bottom: 5px; /* Tạo khoảng cách giữa chữ và gạch chân */
+        }
+
+        /* --- LƯỚI DỊCH VỤ (GRID) --- */
+        .services-grid {
+            display: grid; /* Sử dụng grid để chia bố cục */
+            grid-template-columns: repeat(2, 1fr); /* 2 cột, mỗi cột chiếm 1 phần bằng nhau */
+            gap: 30px; /* Khoảng cách giữa các ô dịch vụ */
+        }
+
+        /* --- MỖI Ô DỊCH VỤ --- */
+        .service-item {
+            display: flex; /* Sử dụng flexbox để căn chỉnh */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 15px; /* Khoảng cách giữa icon và nội dung */
+        }
+
+        /* --- HỘP ICON (HÌNH THOI) --- */
+        .icon-box {
+            width: 80px; /* Kích thước hộp icon */
+            height: 80px; /* Kích thước hộp icon */
+            display: flex; /* Dùng flex để căn giữa icon */
+            justify-content: center; /* Căn giữa ngang */
+            align-items: center; /* Căn giữa dọc */
+            border: 2px solid #ddd; /* Viền màu xám nhạt */
+            border-radius: 10px; /* Bo góc nhẹ */
+            position: relative; /* Định vị tương đối */
+            transform: rotate(45deg); /* Xoay hộp icon thành hình thoi */
+        }
+
+        /* --- ICON BÊN TRONG --- */
+        .icon-box i {
+            font-size: 30px; /* Kích thước icon */
+            color: #d9534f; /* Màu đỏ nhạt */
+            transform: rotate(-45deg); /* Xoay icon ngược lại để nằm ngang */
+        }
+
+        /* --- TIÊU ĐỀ DỊCH VỤ --- */
+        .service-content h3 {
+            font-size: 20px; /* Kích thước chữ lớn */
+            color: #222; /* Màu chữ đen */
+            font-weight: bold; /* In đậm */
+            margin-bottom: 5px; /* Khoảng cách dưới */
+        }
+
+        /* --- MÔ TẢ DỊCH VỤ --- */
+        .service-content p {
+            font-size: 14px; /* Kích thước chữ nhỏ hơn */
+            color: #666; /* Màu chữ xám */
+            line-height: 1.5; /* Tạo khoảng cách dòng */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tiêu đề chính -->
+        <h2 class="section-title">Erat lacinia</h2>
+
+        <!-- Lưới chứa các dịch vụ -->
+        <div class="services-grid">
+            
+            <!-- Dịch vụ 1 -->
+            <div class="service-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-gem"></i> <!-- Icon viên kim cương -->
+                </div>
+                <div class="service-content">
+                    <h3>Portitor ullamcorper</h3> <!-- Tiêu đề dịch vụ -->
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p> <!-- Mô tả -->
+                </div>
+            </div>
+
+            <!-- Dịch vụ 2 -->
+            <div class="service-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-paper-plane"></i> <!-- Icon máy bay giấy -->
+                </div>
+                <div class="service-content">
+                    <h3>Sapien veroeros</h3>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p>
+                </div>
+            </div>
+
+            <!-- Dịch vụ 3 -->
+            <div class="service-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-rocket"></i> <!-- Icon tên lửa -->
+                </div>
+                <div class="service-content">
+                    <h3>Quam lorem ipsum</h3>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p>
+                </div>
+            </div>
+
+            <!-- Dịch vụ 4 -->
+            <div class="service-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-signal"></i> <!-- Icon tín hiệu tăng trưởng -->
+                </div>
+                <div class="service-content">
+                    <h3>Sed magna finibus</h3>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p>
+                </div>
+            </div>
+
+        </div> <!-- Kết thúc grid dịch vụ -->
+    </div> <!-- Kết thúc container -->
+
+</body>
+</html>

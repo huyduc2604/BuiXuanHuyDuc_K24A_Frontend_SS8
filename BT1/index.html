@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 400px;
+}
+
+h4 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4>April 24, 2017</h4>
+            <h2>SED MAGNA IPSUM FAUCIBUS</h2>
+            <img src="https://images.pexels.com/photos/30889575/pexels-photo-30889575/free-photo-of-chi-c-xe-th-thao-mau-cam-thanh-l-ch-tren-con-d-ng-danh-lam-th-ng-c-nh.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Orange Car">
+            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+            <button>FULL STORY</button>
+        </div>
+
+        <div class="card">
+            <h4>April 22, 2017</h4>
+            <h2>PRIMIS EGET IMPERDIET LOREM</h2>
+            <img src="business-man.jpg" alt="Business Man">
+            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+            <button>FULL STORY</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- Các bước thực hiện:
+1. Cấu trúc HTML
+Sử dụng <div> để tạo bố cục chứa hai thẻ bài viết.
+Dùng <h4> cho ngày tháng, <h2> cho tiêu đề.
+Thêm <img> để hiển thị hình ảnh.
+Dùng <p> cho phần mô tả nội dung.
+Thêm <button> cho nút "FULL STORY".
+2. CSS để tạo kiểu
+Dùng display: flex; để căn hai bài viết theo hàng ngang.
+Canh giữa nội dung văn bản.
+Định dạng kiểu chữ (font-family, font-size, font-weight).
+Tạo khoảng cách, padding, margin hợp lý.
+Tạo hiệu ứng nút bấm khi hover.
+
+Giải thích mã nguồn
+HTML
+
+Dùng <div class="container"> để chứa hai thẻ bài viết.
+Mỗi bài viết là một <div class="card">, chứa thông tin ngày, tiêu đề, ảnh, nội dung và nút.
+CSS
+
+Sử dụng display: flex; trong .container để xếp hai thẻ bài viết cạnh nhau.
+box-shadow và border-radius giúp làm mềm góc và tạo hiệu ứng đổ bóng.
+Ảnh width: 100% để căn chỉnh linh hoạt theo kích thước thẻ.
+Nút hover có hiệu ứng đổi màu khi rê chuột vào. -->

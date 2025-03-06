@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Cards</title>
+    <style>
+        /* Reset mặc định cho trình duyệt để đảm bảo giao diện đồng nhất */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif; /* Thiết lập font chữ chung */
+        }
+
+        /* Thiết lập nền trang và căn giữa nội dung */
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            min-height: 100vh; /* Chiều cao tối thiểu là 100% chiều cao màn hình */
+            background-color: #f8f8f8; /* Màu nền xám nhạt */
+            padding: 20px; /* Tạo khoảng cách viền để tránh sát mép màn hình */
+            flex-direction: column; /* Xếp phần tử theo cột */
+        }
+
+        /* Tiêu đề chính của trang */
+        h2 {
+            font-size: 32px; /* Cỡ chữ to */
+            font-weight: bold; /* In đậm */
+            text-align: left;
+            position: relative;
+            margin-bottom: 20px; /* Tạo khoảng cách với nội dung dưới */
+        }
+
+        /* Gạch chân màu đỏ dưới tiêu đề */
+        h2::after {
+            content: "";
+            display: block;
+            width: 250px; /* Độ dài của gạch chân */
+            height: 3px; /* Độ dày của gạch chân */
+            background-color: red; /* Màu đỏ */
+            margin-top: 5px; /* Khoảng cách giữa chữ và gạch chân */
+        }
+
+        /* Container chứa các thẻ bài viết */
+        .card-container {
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa các thẻ bài viết */
+            justify-content: space-between; /* Căn đều khoảng cách giữa các thẻ */
+            max-width: 1000px; /* Giới hạn chiều rộng tối đa */
+            flex-wrap: wrap; /* Đảm bảo hiển thị đẹp trên màn hình nhỏ */
+        }
+
+        /* Thiết kế từng thẻ bài viết */
+        .card {
+            background-color: white; /* Màu nền trắng */
+            padding: 20px; /* Tạo khoảng cách bên trong thẻ */
+            text-align: center; /* Căn giữa nội dung */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            border-radius: 5px; /* Bo góc nhẹ */
+            width: 300px; /* Độ rộng cố định */
+        }
+
+        /* Hình ảnh trong thẻ bài viết */
+        .card img {
+            width: 100%; /* Đảm bảo hình ảnh lấp đầy thẻ */
+            height: auto; /* Giữ tỷ lệ hình ảnh */
+            border-radius: 10px; /* Bo góc ảnh */
+            margin-bottom: 15px; /* Tạo khoảng cách dưới ảnh */
+        }
+
+        /* Tiêu đề bài viết */
+        .card h3 {
+            font-size: 18px; /* Kích thước chữ lớn hơn nội dung */
+            font-weight: bold; /* In đậm */
+            margin-bottom: 10px; /* Tạo khoảng cách dưới tiêu đề */
+        }
+
+        /* Nội dung mô tả */
+        .card p {
+            font-size: 14px;
+            color: #555; /* Màu chữ xám đậm */
+            line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+            margin-bottom: 15px; /* Khoảng cách dưới nội dung */
+        }
+
+        /* Nút MORE */
+        .card button {
+            padding: 8px 15px; /* Tạo kích thước nút */
+            border: 2px solid red; /* Viền đỏ */
+            background: transparent; /* Nền trong suốt */
+            color: red; /* Chữ màu đỏ */
+            font-size: 14px;
+            font-weight: bold; /* Chữ in đậm */
+            text-transform: uppercase; /* Chữ in hoa */
+            cursor: pointer; /* Đổi con trỏ thành bàn tay khi di chuột vào */
+            transition: 0.3s; /* Hiệu ứng mượt khi hover */
+        }
+
+        /* Hiệu ứng hover cho nút */
+        .card button:hover {
+            background-color: red; /* Chuyển nền thành màu đỏ */
+            color: white; /* Chuyển chữ thành màu trắng */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Tiêu đề chính của danh sách bài viết -->
+    <h2>Ipsum sed dolor</h2>
+
+    <!-- Container chứa các thẻ bài viết -->
+    <div class="card-container">
+        
+        <!-- Bài viết 1 -->
+        <div class="card">
+            <img src="https://pos.nvncdn.com/86c7ad-50310/art/artCT/20240925_H0WT7Fh3.png" alt="Person with Hat"> <!-- Hình ảnh đại diện -->
+            <h3>Interdum aenean</h3> <!-- Tiêu đề bài viết -->
+            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p> <!-- Nội dung mô tả -->
+            <button>MORE</button> <!-- Nút xem thêm -->
+        </div>
+
+        <!-- Bài viết 2 -->
+        <div class="card">
+            <img src="https://kenh14cdn.com/k:thumb_w/600/Z3WxvDWHkkhwglFfVOnyhzOPBKmr9M/Image/2013/01/update/Baby-Animals-016-46522/tuyen-tap-dong-vat-em-be-cute-nhat-qua-dat.jpg" alt="Crafting Tools">
+            <h3>Nulla amet dolore</h3>
+            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p>
+            <button>MORE</button>
+        </div>
+
+        <!-- Bài viết 3 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/474x/b7/ce/3d/b7ce3d7d99d95465febe67ae2af9f837.jpg" alt="Woman by Van">
+            <h3>Tempus ullamcorper</h3>
+            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum.</p>
+            <button>MORE</button>
+        </div>
+
+    </div>
+</body>
+</html>

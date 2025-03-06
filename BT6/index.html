@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Input</title>
+
+    <!-- Liên kết Font Awesome để dùng icon tìm kiếm, micro, camera -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Reset CSS để tránh lỗi hiển thị mặc định của trình duyệt */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Chọn font chữ mặc định */
+        }
+
+        /* Định dạng toàn bộ trang với flexbox để căn giữa ô tìm kiếm */
+        body {
+            display: flex; /* Sử dụng flexbox */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao 100% màn hình */
+            background-color: #202124; /* Màu nền đen xám giống giao diện Google */
+        }
+
+        /* Ô chứa thanh tìm kiếm */
+        .search-container {
+            display: flex; /* Sử dụng flexbox để căn chỉnh icon và input */
+            align-items: center; /* Căn giữa icon và ô nhập */
+            background-color: white; /* Màu nền trắng */
+            padding: 10px 15px; /* Khoảng cách bên trong */
+            border-radius: 50px; /* Bo tròn viền giống Google */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng đổ bóng nhẹ */
+            width: 500px; /* Chiều rộng của ô tìm kiếm */
+        }
+
+        /* Icon tìm kiếm ở bên trái */
+        .search-container i {
+            color: #80868b; /* Màu xám nhạt giống Google */
+            font-size: 18px; /* Cỡ icon */
+        }
+
+        /* Ô nhập nội dung tìm kiếm */
+        .search-input {
+            border: none; /* Xóa viền mặc định */
+            outline: none; /* Xóa đường viền khi click vào */
+            font-size: 16px; /* Cỡ chữ */
+            flex: 1; /* Mở rộng để lấp đầy không gian còn lại */
+            margin-left: 10px; /* Tạo khoảng cách giữa icon và text */
+        }
+
+        /* Container chứa icon micro và Google Lens */
+        .search-icons {
+            display: flex; /* Dùng flexbox để căn chỉnh icon */
+            gap: 10px; /* Khoảng cách giữa các icon */
+        }
+
+        /* Định dạng icon micro và Google Lens */
+        .search-icons i {
+            font-size: 18px; /* Kích thước icon */
+            color: #4285f4; /* Màu xanh dương của Google */
+            cursor: pointer; /* Biểu tượng chuột dạng click */
+            transition: 0.3s; /* Hiệu ứng hover */
+        }
+
+        /* Hiệu ứng hover khi di chuột vào icon */
+        .search-icons i:hover {
+            color: #0d47a1; /* Màu xanh đậm hơn khi hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ô tìm kiếm -->
+    <div class="search-container">
+        <i class="fa fa-search"></i> <!-- Icon kính lúp -->
+        <input type="text" class="search-input" placeholder="Nhập từ khóa tìm kiếm"> <!-- Ô nhập -->
+        <div class="search-icons">
+            <i class="fa fa-microphone"></i> <!-- Icon micro -->
+            <i class="fa fa-camera"></i> <!-- Icon Google Lens -->
+        </div>
+    </div>
+
+</body>
+</html>
